@@ -13,8 +13,13 @@ public class Unit1Project {
         double tipPerPerson = splitBill * tipAmount;
         double totalTipPerPerson = tipPerPerson + splitBill;
         double totalTipAmount = tipPerPerson * peopleNum;
-        System.out.println("Each person must tip " + tipPerPerson);
+        double totalCostWithTip = totalBill + totalTipAmount;
+        System.out.println("Each person must tip $" + tipPerPerson);
         System.out.print("This means that the total ");
-        System.out.println("tip amount is " + totalTipAmount);
+        System.out.println("tip amount is $" + totalTipAmount);
+        System.out.println("The total cost including the ");
+        System.out.println("tip is $" + totalCostWithTip);
+        System.out.print("The toatl cost per person");
+        System.out.println("is $" + totalTipPerPerson);
     }
 }
