@@ -19,13 +19,13 @@ public class Unit1Project {
         double totalCostWithTip = totalBill + totalTipAmount; // adds total bill with total tip amount to find total cost of everything
         double roundedTotalCostWithTip = Math.round(totalCostWithTip*100)/100d; // rounds to the hundredths place
         System.out.println(" ");
-        System.out.println("Each person must tip $" + String.format("%.2f", roundedTipPerPerson)); // prints out the tip per person
+        System.out.println("Each person must tip $" + String.format("%.2f", roundedTipPerPerson)); // prints value to hundredths place
         System.out.print("This means that the total ");
-        System.out.println("tip amount is $" + String.format("%.2f", roundedTotalTipAmount));  // prints out total tip amount
+        System.out.println("tip amount is $" + String.format("%.2f", roundedTotalTipAmount)); // prints value to hundredths place
         System.out.print("The total cost per person ");
-        System.out.println("is $" + String.format("%.2f", roundedTotalCostPerPerson)); // prints total cost per person
+        System.out.println("is $" + String.format("%.2f", roundedTotalCostPerPerson)); // prints value to hundredths place
         System.out.print("The total cost including the ");
-        System.out.println("tip is $" + String.format("%.2f", roundedTotalCostWithTip)); // prints total cost including the tip
+        System.out.println("tip is $" + String.format("%.2f", roundedTotalCostWithTip)); // prints value to hundredths place
 
     }
 }
