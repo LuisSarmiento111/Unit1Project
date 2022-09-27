@@ -11,15 +11,21 @@ public class Unit1Project {
         double tipAmount = (double) myObj.nextInt() / 100; // converts given value into a % number
         double splitBill = totalBill / peopleNum; // divides totalBill by peopleNum to get the split bill, then puts value into variable
         double tipPerPerson = splitBill * tipAmount;
-        double totalTipPerPerson = tipPerPerson + splitBill;
+        double roundedTipPerPerson = Math.round(tipPerPerson*100)/100d;
+        double totalCostPerPerson = tipPerPerson + splitBill;
+        double roundedTotalCostPerPerson = Math.round(totalCostPerPerson*100)/100d;
         double totalTipAmount = tipPerPerson * peopleNum;
+        double roundedTotalTipAmount = Math.round(totalTipAmount*100)/100d;
         double totalCostWithTip = totalBill + totalTipAmount;
-        System.out.println("Each person must tip $" + tipPerPerson);
+        double roundedTotalCostWithTip = Math.round(totalCostWithTip*100)/100d;
+        System.out.println(" ");
+        System.out.println("Each person must tip $" + String.format("%.2f", roundedTipPerPerson));
         System.out.print("This means that the total ");
-        System.out.println("tip amount is $" + totalTipAmount);
-        System.out.println("The total cost including the ");
-        System.out.println("tip is $" + totalCostWithTip);
-        System.out.print("The toatl cost per person");
-        System.out.println("is $" + totalTipPerPerson);
+        System.out.println("tip amount is $" + String.format("%.2f", roundedTotalTipAmount));
+        System.out.print("The total cost per person ");
+        System.out.println("is $" + String.format("%.2f", roundedTotalCostPerPerson));
+        System.out.print("The total cost including the ");
+        System.out.println("tip is $" + String.format("%.2f", roundedTotalCostWithTip));
+
     }
 }
